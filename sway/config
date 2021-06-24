@@ -27,7 +27,7 @@ default_border pixel 2 #Disable title bar
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/wallpapers/skull.jpg stretch
+output * bg /usr/share/wallpapers/aesthetic.jpg stretch
 #
 # Example configuration:
 #
@@ -96,7 +96,10 @@ input "1133:16419:Logitech_Wireless_Keyboard_PID:4023" {
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec wlogout # swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec wlogout
+
+    # Enable wifi
+    bindsym $mod+Shift+w exec terminator -e nmtui-connect
 
 #
 # Moving around:
@@ -214,10 +217,11 @@ bindsym $mod+r mode "resize"
 #
 # Functions key
 #
-    bindsym 0x1008ff03 exec light -U 5
-    bindsym 0x1008ff02 exec light -A 5
-    bindsym 0x1008ff12 exec amixer -c 0 set Master 100%
-    bindsym 0x1008ff13 exec amixer -c 1 set Speaker 1.30db+
+    bindsym XF86MonBrightnessDown exec light -U 5
+    bindsym XF86MonBrightnessUp exec light -A 5
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -10%
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10%
+    bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 #
 # Status Bar:
