@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
     "modules-center": ["sway/window"],
-    "modules-right": ["mpd", "idle_inhibitor", "network", "cpu", "memory", "custom/gpu", "temperature", "custom/bluetooth", "pulseaudio", "backlight", "battery", "battery#bat2", "clock", "tray", "custom/power"],
+    "modules-right": ["mpd", "idle_inhibitor", "network", "custom/gpu", "cpu", "memory", "temperature", "custom/bluetooth", "pulseaudio", "backlight", "battery", "clock", "tray", "custom/power"],
     
     // Modules configuration
     // "sway/workspaces": {
@@ -117,7 +117,7 @@
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+	"format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -150,18 +150,18 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
+    "custom/gpu": {
+        "exec": "cat /sys/class/hwmon/hwmon2/device/gpu_busy_percent",
+        "format": "{}% ",
+        "return-type": "",
+        "interval": 1
+    },
     "custom/bluetooth": {
-    	"format": "{} ᛒ ",
+    	"format": "{}  ",
 	"on-click": "blueman-manager"
     },
     "custom/power": {
     	"format": "{} ",
 	"on-click": "wlogout"
-    },
-    "custom/gpu": {
-    	"exec": "cat /sys/class/hwmon/hwmon2/device/gpu_busy_percent",
-  	"format": "GPU: {}%",
-  	"return-type": "",
-  	"interval": 1
     }
 }
