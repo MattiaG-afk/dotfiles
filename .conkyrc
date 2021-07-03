@@ -1,36 +1,76 @@
-backgroud yes
-use_xft yes
-xftfont 123:size=8
-xftalpha 0.1
-update_interval 0.5
-total_run_times 0
-own_window yes
-own_window_type desktop
-own_window_transparent yes
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-double_buffer yes
-minimum_size 250 5
-maximum_width 400
-draw_shades no
-draw_outline no
-draw_borders no
-draw_graph_borders no
-default_color gray
-default_shade_color red
-default_outline_color green
-alignment top_right
-gap_x 10
-gap_y 10
-no_buffers no
-uppercase no
-cpu_avg_samples 2
-net_avg_samples 1
-override_utf8_locale yes
-use_spacer left
-text_buffer_size 256
+conky.config ={
+  -- CONKY SETTINGS
+  background = true,
+  update_interval = 1,
+  total_run_times = 0,
+  
+  cpu_avg_samples = 8,
+  net_avg_samples = 2,
+  
+  override_utf8_locale = true,
+  
+  double_buffer = true,
+  no_buffers = true,
+  
+  text_buffer_size = 32768,
+  
+  -- CONKY: WINDOW SPECIFICATIONS
+  own_window = true,
+  own_window_argb_value = 192,
+  own_window_argb_visual = true,
+  own_window_class = 'conky-semi',
+  own_window_colour = '#0b0d18',
+  own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+  -- own_window_transparent = true,
+  own_window_transparent = false,
+  own_window_type = 'normal',
+  -- own_window_type = 'desktop',
 
-TEXT
+  border_inner_margin = 6,
+  border_width = 5, 
 
+  minimum_height = 1020,
+
+  minimum_width = 280,
+  maximum_width = 280,
+
+  alignment = 'top_right',
+  gap_x = 10,
+  gap_y = 15,
+
+  -- GRAPHICS SETTINGS
+  draw_shades = false,
+  draw_outline = true,
+  draw_borders = false,
+  draw_graph_borders = true,
+  -- draw_graph_borders = false,
+
+  -- TEXT SETTINGS
+  use_xft = true,
+  font = 'Montserrat Regular:size=10',
+  xftalpha = 0.2,
+
+  uppercase = false,
+
+  -- Pad percentages to this many decimals (0 = no padding)
+  pad_percents = 2,
+
+  -- COLOUR SETTINGS
+  default_color = 'AAAAAA',
+  default_shade_color = '333333',
+  -- default_outline_color = '111111',
+  default_outline_color = '010101',
+  color1 = '999999',
+  color2 = 'CCCCCC',
+  color3 = 'EEEEEE',
+  color4 = '444444',
+  color5 = '555555',
+  color6 = '666666',
+  color7 = '3b71a1',
+};
+
+
+conky.text = [[
 ${font Arial:size=20}${color purple}GENTOO${color white} LINUX
 
 ${voffset -90}
@@ -81,4 +121,5 @@ ${font}${color DimGray}Down $alignr ${downspeed wlp4s0} kb/s
 Up $alignr ${upspeed wlp4s0} kb/s
 
 Downloaded: $alignr ${totaldown wlp4s0}
-Uploaded: $alignr ${totalup wlp4s0}
+Uploaded: $alignr ${totalup wlp4s0} 
+]];
