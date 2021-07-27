@@ -80,7 +80,7 @@
 	"interval": 1
     },
     "temperature": {
-    	"hwmon-path": "/sys/class/hwmon/hwmon3/temp2_input", //original -> /sys/class/hwmon/hwmon2/temp1_input
+    	"hwmon-path": "/sys/class/hwmon/hwmon4/temp2_input", //original -> /sys/class/hwmon/hwmon2/temp1_input
         "critical-threshold": 80,
         "format-critical": "{temperatureC}°C {icon}",
         // "thermal-zone": 2,
@@ -151,7 +151,7 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/gpu": {
-        "exec": "cat /sys/class/hwmon/hwmon4/device/gpu_busy_percent",
+        "exec": "cat /sys/class/hwmon/hwmon2/device/gpu_busy_percent",
         "format": "{}% ",
         "return-type": "",
         "interval": 1
@@ -161,7 +161,7 @@
 	"on-click": "blueman-manager"
     },
     "custom/power": {
-    	"format": "{} ",
+    	"format": "{} ⏻︁",
 	"on-click": "wlogout"
     }
 }
