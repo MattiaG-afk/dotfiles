@@ -72,6 +72,10 @@ input "1133:16419:Logitech_Wireless_Keyboard_PID:4023" {
     xkb_options "grp:win_space_toggle"
 }
 
+### Audio
+# Enable pipewire
+exec pipewire
+
 ### Key bindings
 #
 # Basics:
