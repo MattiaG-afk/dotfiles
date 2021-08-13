@@ -112,7 +112,7 @@
         "bat": "BAT2"
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "interface": "wlp4s0", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
@@ -136,7 +136,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "terminator -e ncpamixer"
     },
     "custom/media": {
         "format": "{icon} {}",
