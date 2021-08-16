@@ -158,7 +158,7 @@
     },
     "custom/bluetooth": {
     	"format": "{}  ",
-	"on-click": "blueman-manager"
+	"on-click": "terminator -e bluetoothctl"
     },
     "custom/power": {
     	"format": "{} ⏻︁",
