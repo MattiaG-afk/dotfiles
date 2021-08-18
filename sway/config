@@ -102,9 +102,6 @@ exec pipewire
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec wlogout
 
-    # Enable wifi
-    bindsym $mod+Shift+w exec terminator -e nmtui-connect
-
 #
 # Moving around:
 #
