@@ -19,6 +19,7 @@ set $term terminator
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu wofi -G --show run
+set $menu-floating bash floating wofi -G --show run
 # Window styling
 gaps inner 10
 gaps outer 5
@@ -90,6 +91,7 @@ exec pipewire
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    bindsym $mod+Shift+d exec $menu-floating
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
