@@ -18,7 +18,7 @@ set $term terminator
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi --show run
+set $menu wofi -G --show run
 # Window styling
 gaps inner 10
 gaps outer 5
@@ -34,6 +34,8 @@ output * bg /usr/share/wallpapers/aesthetic.jpg stretch
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
+# Exec wlsunset (change monitor temperature)
+exec wlsunset -l 45.4 -L 11.3
 
 ### Idle configuration
 #
