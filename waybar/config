@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
     "modules-center": ["sway/window"],
-    "modules-right": ["mpd", "idle_inhibitor", "network", "custom/gpu", "cpu", "memory", "temperature", "custom/bluetooth", "pulseaudio", "backlight", "battery", "clock", "tray", "custom/power"],
+    "modules-right": ["mpd", "idle_inhibitor", "network", "custom/gpu", "cpu", "memory", "disk", "temperature", "custom/bluetooth", "pulseaudio", "backlight", "battery", "clock", "tray", "custom/power"],
     
     // Modules configuration
     // "sway/workspaces": {
@@ -66,14 +66,14 @@
     },
     "clock": {
         "timezone": "Europe/Rome",
+	"locale": "it_IT.UTF-8",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%d-%m}"
+        "format-alt": "{:%d-%m-%Y}" // "{:%Y-%d-%m}"
     },
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": false,
-	"on-click": "terminator -e htop",
-	"interval": 1
+	"format-alt": "{avg_frequency}GHz ",
+        "interval": 1
     },
     "memory": {
         "format": "{}% ",
@@ -108,16 +108,18 @@
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
     "network": {
-        "interface": "wlp4s0", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+	// "interface": "wlp4s0", // (Optional) To force the use of this interface
+	"format-wifi": "{essid} ({signalStrength}%) ",
+	"format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+	"format-linked": "{ifname} (No IP) ",
+	"format-disconnected": "Disconnected ⚠",
 	"format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "disk": {
+    	"path": "/",
+	"format": "{percentage_used}% ",
+	"format-alt": "{used} "
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
