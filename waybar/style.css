@@ -85,8 +85,6 @@ window#waybar {
 }
 #clock{
     padding: 0 16px;
-}
-#clock {
     background: #ff3434;
 }
 #custom-power {
