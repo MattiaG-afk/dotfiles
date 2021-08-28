@@ -75,19 +75,13 @@ window#waybar {
     background: #b58900
 }
 #battery {
-    background: white;
+    background: #ffffff;
 }
 #battery.charging {
-    background: green;
+    background: #00ff00;
 }
 #battery.critical:not(.charging) {
     background-color: #f53c3c;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 #clock{
     padding: 0 16px;
