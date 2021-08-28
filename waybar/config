@@ -159,7 +159,7 @@
         "interval": 1
     },
     "custom/power": {
-    	"format": "{}",
+    	"format": "",
 	"on-click": "wlogout"
     }
 }
