@@ -121,7 +121,8 @@
 	"format-linked": "{ifname} (No IP) ",
 	"format-disconnected": "Disconnected ⚠",
 	"format-alt": "{ifname}: {ipaddr}/{cidr}",
-	"tooltip": false
+	"tooltip-format": "Down: {bandwidthDownBits} Up: {bandwidthUpBits}",
+	"interval": 1
     },
     "disk": {
     	"path": "/",
