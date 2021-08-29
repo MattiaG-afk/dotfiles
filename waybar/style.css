@@ -35,14 +35,14 @@ window#waybar {
     margin: 0 4px;
     color: #fdf6e3;
 }
-#network {
-    background: #bd93f9;
-}
-#idle_inhibitor, #custom-gpu, #cpu, #memory, #disk, #temperature, #pulseaudio, #backlight, #battery, #clock, #tray {
+#idle_inhibitor, #network, #custom-gpu, #cpu, #memory, #disk, #temperature, #pulseaudio, #backlight, #battery, #clock, #tray {
     color: #1E1F23;
     border-radius: 26px;
     margin: 0 4px;
     padding: 0 16px;
+}
+#network {
+    background: #bd93f9;
 }
 #idle_inhibitor {
     background-color: #2d3436;
