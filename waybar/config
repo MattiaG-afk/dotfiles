@@ -25,7 +25,11 @@
     //     }
     //  },
     "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
+        "format": "<span style=\"italic\">{}</span>",
+	"tooltip": false
+    },
+    "sway/window": {
+        "tooltip": false
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ ",
@@ -77,6 +81,7 @@
     },
     "memory": {
         "format": "{}% ",
+	"format-alt": "{used:0.1f} GiB ",
 	"interval": 1
     },
     "temperature": {
@@ -87,7 +92,8 @@
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""],
-	"interval": 1
+	"interval": 1,
+	"tooltip": false
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -156,10 +162,12 @@
         "exec": "cat /sys/class/hwmon/hwmon2/device/gpu_busy_percent",
         "format": "{}% ",
         "return-type": "",
-        "interval": 1
+        "interval": 1,
+	"tooltip": false
     },
     "custom/power": {
     	"format": "",
-	"on-click": "wlogout"
+	"on-click": "wlogout",
+	"tooltip": false
     }
 }
