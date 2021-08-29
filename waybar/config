@@ -120,7 +120,8 @@
 	"format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
 	"format-linked": "{ifname} (No IP) ",
 	"format-disconnected": "Disconnected ⚠",
-	"format-alt": "{ifname}: {ipaddr}/{cidr}"
+	"format-alt": "{ifname}: {ipaddr}/{cidr}",
+	"tooltip": false
     },
     "disk": {
     	"path": "/",
