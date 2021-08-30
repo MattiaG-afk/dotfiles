@@ -23,12 +23,12 @@ set $menu-floating bash .config/sway/floating wofi -G --show run
 # Window styling
 gaps inner 10
 gaps outer 5
-default_border pixel 2 #Disable title bar
+default_border none
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/wallpapers/aesthetic.jpg stretch
+output * bg /usr/share/wallpapers/nord.jpg stretch
 #
 # Example configuration:
 #
