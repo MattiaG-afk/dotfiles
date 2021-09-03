@@ -28,7 +28,7 @@ default_border none
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/wallpapers/nord.jpg stretch
+output * bg /usr/share/wallpapers/gentoo.png stretch
 #
 # Example configuration:
 #
