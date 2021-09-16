@@ -28,7 +28,7 @@ default_border none
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/wallpapers/gentoo.png stretch
+output * bg /usr/share/wallpapers/my-gentoo.png stretch
 #
 # Example configuration:
 #
@@ -92,6 +92,9 @@ exec pipewire
     # Start your launcher
     bindsym $mod+d exec $menu
     bindsym $mod+Shift+d exec $menu-floating
+
+    # Start Ranger file manager
+    bindsym $mod+Shift+f exec terminator -e ranger
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
