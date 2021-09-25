@@ -97,6 +97,9 @@
     },
     "backlight": {
         // "device": "acpi_video1",
+	"interval": 1,
+	"on-scroll-up": "exec light -A 2",
+	"on-scroll-down": "exec light -U 2",
         "format": "{percent}% {icon}",
         "format-icons": ["", ""]
     },
