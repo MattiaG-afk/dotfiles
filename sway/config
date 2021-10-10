@@ -75,6 +75,13 @@ input "1133:16419:Logitech_Wireless_Keyboard_PID:4023" {
     xkb_options "grp:win_space_toggle"
 }
 
+### Output configuration
+# Read `man 5 sway-input` for more information about this section.
+output eDP-1 pos 0 0 res 1920x1080
+output HDMI-A-1 pos 1920 0 res 1920x1080
+
+# Display workspace
+workspace 10 output HDMI-A-1
 ### Audio
 # Enable pipewire
 exec pipewire
@@ -95,6 +102,9 @@ exec pipewire
 
     # Start Ranger file manager
     bindsym $mod+Shift+f exec terminator -e ranger
+
+    #Screenshot
+    bindsym $mod+Shift+s exec grim
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
