@@ -1,0 +1,15 @@
+func! WordProcessorMode()
+    setlocal smartindent
+    setlocal spell spelllang=it_IT
+    setlocal noexpandtab
+endfu
+
+set autoindent
+set wildmenu
+set relativenumber
+set mouse=a
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set encoding=utf-8
+com! WP call WordProcessorMode()
