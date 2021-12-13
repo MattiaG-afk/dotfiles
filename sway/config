@@ -20,6 +20,7 @@ set $term terminator
 # on the original workspace that the command was run on.
 set $menu wofi -G --show run
 set $menu-floating bash .config/sway/floating wofi -G --show run
+
 # Window styling
 gaps inner 10
 gaps outer 5
@@ -28,7 +29,7 @@ default_border none
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/wallpapers/gentoo.png stretch
+output * bg /usr/share/wallpapers/gruvbox_skull.jpg stretch
 #
 # Example configuration:
 #
@@ -84,7 +85,8 @@ output HDMI-A-1 pos 1920 0 res 1920x1080
 workspace 10 output HDMI-A-1
 ### Audio
 # Enable pipewire
-exec pipewire
+# exec pipewire
+exec gentoo-pipewire-launcher
 
 ### Key bindings
 #
