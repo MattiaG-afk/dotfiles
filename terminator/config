@@ -15,8 +15,14 @@
     background_color = "#2E3440"
     cursor_color = "#D8DEE9"
     foreground_color = "#D8DEE9"
-    show_titlebar = False
+	show_titlebar = False
     palette = "#3B4252:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#88C0D0:#E5E9F0:#4C566A:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#8F  BCBB:#ECEFF4"
+  [[gruvbox-dark]]
+	show_titlebar = False
+	background_color = "#282828"
+	cursor_color = "#7c6f64"
+	foreground_color = "#ebdbb2"
+	palette = "#181818:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#ebdbb2:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
 [layouts]
   [[default]]
     [[[window0]]]
@@ -25,5 +31,5 @@
     [[[child1]]]
       type = Terminal
       parent = window0
-      profile = nord
+      profile = gruvbox-dark
 [plugins]
