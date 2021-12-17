@@ -2,22 +2,21 @@
     font-size: 12px;
     font-family: monospace;
 }
-
 window#waybar {
-    background: #1E1F23;
+    background: transparent; /* Nord: #1E1F23 */
     color: #fdf6e3;
-    border-radius: 26px;
 }
+/* TOP BAR */
 #workspaces {
     border-radius: 26px;
-    background: #000000;
+    background: transparent;
 }
 #workspaces button {
     padding: 0 2px;
-    color: #fdf6e3;
+    color: #ebdbb2; /* Nord: #fdf6e3*/
 }
 #workspaces button.focused {
-    color:  #81D425;
+    color:  #689d6a; /* Nord: #a81D425 */
 }
 #workspaces button:hover {
     box-shadow: inherit;
@@ -26,71 +25,75 @@ window#waybar {
     background: #0C3D27;
 }
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: #cc241d; /* Nord: #eb4d4b */
 }
 #mode {
     border-radius: 26px;
-    background: #000000;
+    background: transparent; /* Nord: #1E1F23 */
     padding: 0 2px;
     margin: 0 4px;
-    color: #fdf6e3;
+    color: #ebdbb2; /* Nord: #fdf6e3 */ 
 }
 #idle_inhibitor, #network, #custom-gpu, #cpu, #memory, #disk, #temperature, #pulseaudio, #backlight, #battery, #clock, #tray {
-    color: #1E1F23;
+    color: #282828; /* Nord: #1E1F23 */
     border-radius: 26px;
     margin: 0 4px;
     padding: 0 16px;
 }
-#network {
-    background: #bd93f9;
-}
 #idle_inhibitor {
-    background-color: #2d3436;
-    color: #ecf0f1;
+    background-color: #504945; /* Nord: #2d3436 */
+    color: #d5c4a1; /* Nord: #ecf0f1 */
 }
-
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
+    background-color: #d5c4a1; /* Nord: #ecf0f1 */
+    color: #504945; /* Nord: #2d3436*/
+}
+#network {
+    background: #b16286; /* Nord: #bd93f9 */
 }
 #custom-gpu {
-    background: #fec345;
+    background: #d79921; /* Nord: #fec345 */
 }
 #cpu {
-    background: #f1fa8c;
+    background: #fabd2f; /* Nord: #f1fa8c */
 }
 #memory {
-    background: #ff6e67;
+    background: #fb4934; /* Nord: #ff6e67 */
 }
 #disk {
-    background: #964B00;
+    background: #d65d0e; /* Nord: #964B00 */
 }
 #temperature {
-    background: #5af78e;
+    background: #8ec07c; /* Nord: #5af78e */
 }
 #pulseaudio {
-    background: #9aedfe;
+    background: #458588; /* Nord: #9aedfe */
 }
 #backlight {
-    background: #b58900
+    background: #fe8019; /* Nord: #b58900 */
 }
 #battery {
-    background: #ffffff;
+    background: #fbf1c7; /* Nord: #ffffff */
 }
 #battery.charging {
-    background: #00ff00;
+    background: #98971a; /* Nord: #00ff00 */
 }
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
+    background-color: #cc241d; /* Nord: #f53c3c */
 }
 #clock{
     padding: 0 16px;
-    background: #ff3434;
+    background: #cc241d; /* Nord: #ff3434 */
 }
 #custom-power {
     color: #1E1F23;
     border-radius: 26px;
     margin-left: 4px;
     padding: 0 16px;
-    background: #F5C42B;
+    background: #fabd2f; /* Nord: #f5c42b */
+}
+
+/* BOTTOM BAR */
+#custom-menu, #custom-firefox, #custom-terminal, #custom-vim, #coustom-discord {
+    margin: 0 4px;
 }
