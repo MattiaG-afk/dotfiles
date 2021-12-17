@@ -119,7 +119,7 @@ exec gentoo-pipewire-launcher
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec wlogout
+    bindsym $mod+Shift+e exec wlogout -p layer-shell
 
 #
 # Moving around:
@@ -248,7 +248,7 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    swaybar_command waybar
+	swaybar_command waybar
 }
 
 include /etc/sway/config.d/*
