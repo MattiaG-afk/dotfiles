@@ -94,6 +94,7 @@ window#waybar {
 }
 
 /* BOTTOM BAR */
-#custom-menu, #custom-firefox, #custom-terminal, #custom-vim, #coustom-discord {
+#custom-menu, #custom-firefox, #custom-terminal, #custom-vim, #custom-libreoffice, #custom-discord, #mpd, #tray {
+	font-size: 20px;
     margin: 0 4px;
 }
