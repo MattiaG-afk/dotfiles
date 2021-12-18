@@ -18,8 +18,8 @@ set $term terminator
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi -s .config/wofi/styles.css -G --show run
-set $menu-floating bash .config/sway/floating wofi -s .config/wofi/styles.css -G --show run
+set $menu bash .config/wofi/check_if_running.sh
+set $menu-floating bash .config/sway/floating wofi -s .config/wofi/styles.css -x 0 -y 492 -G --show run
 
 # Window styling
 gaps inner 10
