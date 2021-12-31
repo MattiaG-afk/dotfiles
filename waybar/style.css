@@ -34,7 +34,7 @@ window#waybar {
     margin: 0 4px;
     color: #ebdbb2; /* Nord: #fdf6e3 */ 
 }
-#idle_inhibitor, #network, #custom-gpu, #cpu, #memory, #disk, #temperature, #pulseaudio, #backlight, #battery, #clock, #tray {
+#idle_inhibitor, #custom-weather, #network, #custom-gpu, #cpu, #memory, #disk, #temperature, #pulseaudio, #backlight, #battery, #clock, #tray {
     color: #282828; /* Nord: #1E1F23 */
     border-radius: 26px;
     margin: 0 4px;
@@ -47,6 +47,9 @@ window#waybar {
 #idle_inhibitor.activated {
     background-color: #d5c4a1; /* Nord: #ecf0f1 */
     color: #504945; /* Nord: #2d3436*/
+}
+#custom-weather {
+	background: #689d6a;
 }
 #network {
     background: #b16286; /* Nord: #bd93f9 */
@@ -94,7 +97,7 @@ window#waybar {
 }
 
 /* BOTTOM BAR */
-#custom-menu, #custom-firefox, #custom-terminal, #custom-vim, #custom-libreoffice, #custom-discord, #mpd, #tray {
-	font-size: 20px;
+#custom-menu, #custom-firefox, #custom-filemanager, #custom-terminal, #custom-vim, #custom-libreoffice, #custom-zathura, #custom-spotify, #custom-discord, #mpd, #tray {
+    font-size: 20px;
     margin: 0 4px;
 }
