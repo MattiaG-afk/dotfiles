@@ -19,7 +19,8 @@ set $term terminator
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu bash .config/wofi/check_if_running.sh
-set $menu-floating bash .config/sway/floating wofi -s .config/wofi/styles.css -x 0 -y 492 -G --show run
+# set $menu-floating bash .config/sway/floating wofi -s .config/wofi/styles.css -x 0 -y 492 -G --show run
+set $menu-floating python3 /home/mattia/Desktop/Projects/Ricing/exposé/tests/split.py ~/.config/wofi/check_if_running.sh
 
 # Window styling
 gaps inner 10
