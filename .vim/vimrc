@@ -1,8 +1,34 @@
-func! WordProcessorMode()
-    setlocal smartindent
-    setlocal spell spelllang=it_IT
-    setlocal noexpandtab
-endfu
+" For Vundle
+set nocompatible
+set shell=/bin/bash
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'scrooloose/nerdtree'
+autocmd VimEnter * NERDTree
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+Plugin 'vim-syntastic/Syntastic'
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+
+Plugin 'mattn/emmet-vim'
+
+Plugin 'rust-lang/rust.vim'
+
+call vundle#end()
+filetype plugin indent on
 
 set autoindent
 set wildmenu
@@ -14,4 +40,3 @@ set shiftwidth=4
 set encoding=utf-8
 set background=dark
 colorscheme gruvbox
-com! WP call WordProcessorMode()
