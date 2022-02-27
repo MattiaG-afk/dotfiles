@@ -92,7 +92,7 @@
 	"cpu": {
 		"format": "{usage}% ",
 		"format-alt": "{avg_frequency}GHz ",
-		"on-click-right": "terminator -e bashtop",
+		"on-click-right": "alacritty -e bpytop",
 		"interval": 1
 	},
 	"memory": {
@@ -141,7 +141,7 @@
 		"format-disconnected": "Disconnected ⚠",
 		"format-alt": "{ifname}: {ipaddr}/{cidr}",
 		"tooltip-format": "Down: {bandwidthDownBits} Up: {bandwidthUpBits}",
-		"on-click-right": "terminator -e nmtui",
+		"on-click-right": "alacritty -e nmtui",
 		"interval": 1
 	},
 	"disk": {
@@ -163,10 +163,10 @@
 			"headset": "",
 			"phone": "",
 			"portable": "",
-			"car": "",
-			"default": ["", "", ""]
+	 		"car": "",
+	 		"default": ["", "", ""]
 		},
-		"on-click": "terminator -e ncpamixer"
+		"on-click": "alacritty -e ncpamixer"
 	},
 	"custom/media": {
 		"format": "{icon} {}",
@@ -199,13 +199,18 @@
 	"position": "bottom", // Waybar position (top|bottom|left|right)
 	// "height": 30, // Waybar height (to be removed for auto height)
 	// "width": 1600, // Waybar width
-	"modules-left": ["custom/menu", "custom/firefox", "custom/filemanager", "custom/terminal", "custom/vim", "custom/libreoffice", "custom/zathura", "custom/spotify", "custom/discord"],
+	"modules-left": ["custom/menu", "custom/windows", "custom/firefox", "custom/filemanager", "custom/terminal", "custom/vim", "custom/libreoffice", "custom/zathura", "custom/spotify", "custom/discord"],
 	"modules-center": ["sway/window"],
 	"modules-right": ["mpd", "tray"],
 	"custom/menu": {
 		"format": "{}", // 
 		"tooltip": false,
 		"on-click": "exec bash .config/wofi/check_if_running.sh"
+	},
+	"custom/windows": {
+		"format": "{}",
+		"tooltip": false,
+		"on-click": "exec qemu-system-x86_64 -enable-kvm -boot menu=on -drive file=/home/mattia/Desktop/VMs/Windows_10/root.img -cpu host -smp 6 -m 8G -vga virtio -display sdl,gl=on -soundhw all"
 	},
 	"custom/firefox": {
 		"format": "{}",
@@ -215,17 +220,17 @@
 	"custom/filemanager": {
 		"format": "{}",
 		"tooltip": false,
-		"on-click": "exec terminator -e nnn"
+		"on-click": "exec alacritty -e ranger"
 	},
 	"custom/terminal": {
 		"format": "{}",
 		"tooltip": false,
-		"on-click": "exec terminator"
+		"on-click": "exec alacritty"
 	},
 	"custom/vim": {
 		"format": "{}",
 		"tooltip": false,
-		"on-click": "terminator -e vim"
+		"on-click": "alacritty -e vim"
 	},
 	"custom/libreoffice": {
 		"format": "{}",
