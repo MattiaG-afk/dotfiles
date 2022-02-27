@@ -1,8 +1,8 @@
 [global_config]
   title_transmit_fg_color = "#e2e2e2"
-  title_transmit_bg_color = "#000000"
+  title_transmit_bg_color = "#1b1b1b"
   title_inactive_fg_color = "#e2e2e2"
-  title_inactive_bg_color = "#a0a0a0"
+  title_inactive_bg_color = "#3b3b3b"
 [keybindings]
   help = ""
 [profiles]
@@ -14,7 +14,7 @@
     cursor_color = "#e2e2e2"
     foreground_color = "#e2e2e2"
     show_titlebar = False
-    palette = "#000000:#9f1919:#259000:#a9b519:#262eb4:#bb32b8:#34dd91:#f6f6f6:#a0a0a0:#cd3a3a:#53903e:#adb54a:#4047b4:#bb55b9:#6cddaa:#fdfdfd"
+    palette = "#1b1b1b:#9f1919:#259000:#a9b519:#262eb4:#bb32b8:#34dd91:#f6f6f6:#3b3b3b:#cd3a3a:#53903e:#adb54a:#4047b4:#bb55b9:#6cddaa:#fdfdfd"
   [[gruvbox-dark]]
     background_color = "#282828"
     cursor_color = "#7c6f64"
