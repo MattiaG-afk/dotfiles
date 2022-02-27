@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term terminator
+set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -89,6 +89,13 @@ workspace 10 output HDMI-A-1
 # exec pipewire
 exec gentoo-pipewire-launcher
 
+# Enable screen sharing
+exec dbus-update-activation-environment --all
+
+# Enable clamAV daemon
+exec rc-service clamd start
+exec rc-service freshclam start
+
 ### Key bindings
 #
 # Basics:
@@ -104,7 +111,7 @@ exec gentoo-pipewire-launcher
     bindsym $mod+Shift+d exec $menu-floating
 
     # Start Ranger file manager
-    bindsym $mod+Shift+f exec terminator -e ranger
+    bindsym $mod+Shift+f exec alacritty -e ranger
 
     #Screenshot
     bindsym $mod+Shift+s exec grim
