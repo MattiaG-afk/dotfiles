@@ -245,7 +245,7 @@
 	"custom/spotify" :{
 		"format": "{}",
 		"tooltip": false,
-		"on-click": "exec spotify"
+		"on-click": "exec spotify-adblock"
 	},
 	"custom/discord": {
 		"format": "{}",
