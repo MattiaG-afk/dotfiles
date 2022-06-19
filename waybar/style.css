@@ -32,7 +32,7 @@ window#waybar {
     background: transparent; /* Nord: #1E1F23 */
     padding: 0 2px;
     margin: 0 4px;
-    color: #ebdbb2; /* Nord: #fdf6e3 */ 
+    color: #ebdbb2; /* Nord: #fdf6e3 */
 }
 #idle_inhibitor, #custom-weather, #network, #custom-gpu, #cpu, #memory, #disk, #temperature, #pulseaudio, #backlight, #battery, #clock, #tray {
     color: #282828; /* Nord: #1E1F23 */
@@ -97,7 +97,7 @@ window#waybar {
 }
 
 /* BOTTOM BAR */
-#custom-menu, #custom-firefox, #custom-filemanager, #custom-terminal, #custom-vim, #custom-libreoffice, #custom-zathura, #custom-spotify, #custom-discord, #mpd, #tray {
+#custom-menu, #custom-windows, #custom-firefox, #custom-filemanager, #custom-terminal, #custom-vim, #custom-libreoffice, #custom-zathura, #custom-spotify, #custom-discord, #mpd, #tray {
     font-size: 20px;
     margin: 0 4px;
 }
