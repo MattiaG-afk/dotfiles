@@ -30,7 +30,8 @@ default_border none
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/wallpapers/gruvbox_skull.jpg stretch
+output * bg /home/mattia/Scaricati/skull_7.jpg stretch
+# /usr/share/wallpapers/gruvbox_skull.jpg stretch
 #
 # Example configuration:
 #
@@ -91,10 +92,6 @@ exec gentoo-pipewire-launcher
 
 # Enable screen sharing
 exec dbus-update-activation-environment --all
-
-# Enable clamAV daemon
-exec rc-service clamd start
-exec rc-service freshclam start
 
 ### Key bindings
 #
