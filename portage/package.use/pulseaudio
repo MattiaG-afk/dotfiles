@@ -1,0 +1,3 @@
+media-sound/spotify pulseaudio
+gui-apps/waybar pulseaudio
+media-plugins/alsa-plugins -pipewire-alsa
